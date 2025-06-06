@@ -12,22 +12,22 @@ const PhotoGallery = ({
   return (
     <div className={viewMode === 'grid' ? 'photo-grid' : 'space-y-3'}>
       {photos.map((photo, index) => 
-        viewMode === 'grid' ? (
+viewMode === 'grid' ? (
           <PhotoGridItem 
             key={photo.id} 
             photo={photo} 
             index={index} 
-            selected={selectedPhotos.includes(photo.id)}
+            selected={Array.isArray(selectedPhotos) && selectedPhotos.includes(photo.id)}
             onToggleSelection={onToggleSelection}
             onDeletePhoto={onDeletePhoto}
             onPhotoClick={onPhotoClick}
           />
         ) : (
-          <PhotoListItem 
+<PhotoListItem 
             key={photo.id} 
             photo={photo} 
             index={index} 
-            selected={selectedPhotos.includes(photo.id)}
+            selected={Array.isArray(selectedPhotos) && selectedPhotos.includes(photo.id)}
             onToggleSelection={onToggleSelection}
             onDeletePhoto={onDeletePhoto}
             onPhotoClick={onPhotoClick}

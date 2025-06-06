@@ -4,7 +4,7 @@ import PhotoListItem from '@/components/molecules/PhotoListItem'
 const PhotoGallery = ({ 
   photos, 
   viewMode, 
-  selectedPhotos, 
+  selectedPhotos = [], 
   onToggleSelection, 
   onDeletePhoto, 
   onPhotoClick 

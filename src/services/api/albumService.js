@@ -262,10 +262,9 @@ const albumService = {
     } catch (error) {
       console.error('Error deleting album:', error)
       toast.error('Failed to delete album')
-      throw error
+throw error
     }
   }
 }
 
-export default albumService
 export default albumService

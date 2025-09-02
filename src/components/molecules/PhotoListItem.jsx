@@ -37,9 +37,10 @@ const PhotoListItem = ({ photo, index, selected, onToggleSelection, onDeletePhot
         <Text className="text-sm text-surface-500 dark:text-surface-400">
           {photo.uploadedAt && format(new Date(photo.uploadedAt), 'MMM d, yyyy h:mm a')}
         </Text>
-        <Text className="text-xs text-surface-400 dark:text-surface-500">
+<Text className="text-xs text-surface-400 dark:text-surface-500">
           {photo.width && photo.height && `${photo.width} × ${photo.height}`}
           {photo.size && ` • ${Math.round(photo.size / 1024)} KB`}
+          {photo.location && ` • ${photo.location}`}
         </Text>
       </div>
 

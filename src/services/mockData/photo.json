@@ -9,9 +9,10 @@
     "height": 2667,
     "uploadedAt": "2024-01-15T10:30:00Z",
     "takenAt": "2024-01-14T18:45:00Z",
-    "albumIds": ["album-1", "album-2"]
+    "albumIds": ["album-1", "album-2"],
+    "location": "Banff National Park, Canada"
   },
-  {
+{
     "id": "photo-2",
     "name": "Ocean Waves",
     "url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -21,9 +22,10 @@
     "height": 2160,
     "uploadedAt": "2024-01-14T14:22:00Z",
     "takenAt": "2024-01-13T09:15:00Z",
-    "albumIds": ["album-2"]
+    "albumIds": ["album-2"],
+    "location": "Malibu Beach, California"
   },
-  {
+{
     "id": "photo-3",
     "name": "City Lights",
     "url": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -33,9 +35,10 @@
     "height": 2731,
     "uploadedAt": "2024-01-13T20:15:00Z",
     "takenAt": "2024-01-12T21:30:00Z",
-    "albumIds": ["album-1"]
+    "albumIds": ["album-1"],
+    "location": "New York City, NY"
   },
-  {
+{
     "id": "photo-4",
     "name": "Forest Path",
     "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -45,9 +48,10 @@
     "height": 2400,
     "uploadedAt": "2024-01-12T16:45:00Z",
     "takenAt": "2024-01-11T12:20:00Z",
-    "albumIds": ["album-3"]
+    "albumIds": ["album-3"],
+    "location": "Olympic National Park, Washington"
   },
-  {
+{
     "id": "photo-5",
     "name": "Desert Landscape",
     "url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -57,9 +61,10 @@
     "height": 2304,
     "uploadedAt": "2024-01-11T11:30:00Z",
     "takenAt": "2024-01-10T15:45:00Z",
-    "albumIds": ["album-2", "album-3"]
+    "albumIds": ["album-2", "album-3"],
+    "location": "Antelope Canyon, Arizona"
   },
-  {
+{
     "id": "photo-6",
     "name": "Tropical Beach",
     "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -69,9 +74,10 @@
     "height": 2800,
     "uploadedAt": "2024-01-10T09:15:00Z",
     "takenAt": "2024-01-09T14:30:00Z",
-    "albumIds": ["album-1", "album-2"]
+    "albumIds": ["album-1", "album-2"],
+    "location": "Bora Bora, French Polynesia"
   },
-  {
+{
     "id": "photo-7",
     "name": "Winter Mountains",
     "url": "https://images.unsplash.com/photo-1551524164-6cf2ac92f0c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -81,9 +87,10 @@
     "height": 2560,
     "uploadedAt": "2024-01-09T13:20:00Z",
     "takenAt": "2024-01-08T10:15:00Z",
-    "albumIds": ["album-3"]
+    "albumIds": ["album-3"],
+    "location": "Swiss Alps, Switzerland"
   },
-  {
+{
     "id": "photo-8",
     "name": "Urban Architecture",
     "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -93,9 +100,10 @@
     "height": 2176,
     "uploadedAt": "2024-01-08T17:45:00Z",
     "takenAt": "2024-01-07T16:20:00Z",
-    "albumIds": ["album-1"]
+    "albumIds": ["album-1"],
+    "location": "Chicago, Illinois"
   },
-  {
+{
     "id": "photo-9",
     "name": "Cherry Blossoms",
     "url": "https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -105,9 +113,10 @@
     "height": 2700,
     "uploadedAt": "2024-01-07T12:30:00Z",
     "takenAt": "2024-01-06T08:45:00Z",
-    "albumIds": ["album-2", "album-3"]
+    "albumIds": ["album-2", "album-3"],
+    "location": "Kyoto, Japan"
   },
-  {
+{
     "id": "photo-10",
     "name": "Golden Hour Fields",
     "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -117,9 +126,10 @@
     "height": 3000,
     "uploadedAt": "2024-01-06T19:15:00Z",
     "takenAt": "2024-01-05T18:30:00Z",
-    "albumIds": ["album-1", "album-3"]
+    "albumIds": ["album-1", "album-3"],
+    "location": "Tuscany, Italy"
   },
-  {
+{
     "id": "photo-11",
     "name": "Waterfall Cascade",
     "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -129,9 +139,10 @@
     "height": 4608,
     "uploadedAt": "2024-01-05T14:20:00Z",
     "takenAt": "2024-01-04T11:45:00Z",
-    "albumIds": ["album-2"]
+    "albumIds": ["album-2"],
+    "location": "Iceland"
   },
-  {
+{
     "id": "photo-12",
     "name": "Starry Night Sky",
     "url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
@@ -141,6 +152,7 @@
     "height": 3200,
     "uploadedAt": "2024-01-04T22:30:00Z",
     "takenAt": "2024-01-03T23:15:00Z",
-    "albumIds": ["album-1", "album-3"]
+    "albumIds": ["album-1", "album-3"],
+    "location": "Atacama Desert, Chile"
   }
 ]

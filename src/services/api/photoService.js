@@ -11,8 +11,7 @@ const photoService = {
   async getAll() {
     try {
       const tableName = 'photo'
-      const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids']
-      
+const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids', 'location_c']
       const params = {
         fields: tableFields,
         pagingInfo: {
@@ -30,7 +29,7 @@ const photoService = {
       }
 
       // Map database fields to UI expected format
-      const photos = response.data?.map(photo => ({
+const photos = response.data?.map(photo => ({
         id: photo.Id,
         name: photo.Name,
         tags: photo.Tags,
@@ -43,6 +42,7 @@ const photoService = {
         uploadedAt: photo.uploaded_at,
         takenAt: photo.taken_at,
         albumIds: photo.album_ids?.split(',') || [],
+        location: photo.location_c,
         createdOn: photo.CreatedOn,
         createdBy: photo.CreatedBy,
         modifiedOn: photo.ModifiedOn,
@@ -60,8 +60,7 @@ const photoService = {
   async getById(id) {
     try {
       const tableName = 'photo'
-      const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids']
-      
+const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids', 'location_c']
       const params = {
         fields: tableFields
       }
@@ -77,7 +76,7 @@ const photoService = {
         return null
       }
 
-      // Map database fields to UI expected format
+// Map database fields to UI expected format
       const photo = {
         id: response.data.Id,
         name: response.data.Name,
@@ -91,6 +90,7 @@ const photoService = {
         uploadedAt: response.data.uploaded_at,
         takenAt: response.data.taken_at,
         albumIds: response.data.album_ids?.split(',') || [],
+        location: response.data.location_c,
         createdOn: response.data.CreatedOn,
         createdBy: response.data.CreatedBy,
         modifiedOn: response.data.ModifiedOn,
@@ -109,7 +109,7 @@ const photoService = {
       const tableName = 'photo'
       
       // Only include Updateable fields
-      const params = {
+const params = {
         records: [{
           Name: photoData.name,
           Tags: photoData.tags || '',
@@ -121,7 +121,8 @@ const photoService = {
           height: photoData.height || 0,
           uploaded_at: photoData.uploadedAt || new Date().toISOString(),
           taken_at: photoData.takenAt || new Date().toISOString(),
-          album_ids: Array.isArray(photoData.albumIds) ? photoData.albumIds.join(',') : ''
+          album_ids: Array.isArray(photoData.albumIds) ? photoData.albumIds.join(',') : '',
+          location_c: photoData.location || ''
         }]
       }
 
@@ -153,7 +154,7 @@ const photoService = {
           toast.success('Photo created successfully')
           
           // Map database fields to UI expected format
-          return {
+return {
             id: createdPhoto.Id,
             name: createdPhoto.Name,
             tags: createdPhoto.Tags,
@@ -165,7 +166,8 @@ const photoService = {
             height: createdPhoto.height,
             uploadedAt: createdPhoto.uploaded_at,
             takenAt: createdPhoto.taken_at,
-            albumIds: createdPhoto.album_ids?.split(',') || []
+            albumIds: createdPhoto.album_ids?.split(',') || [],
+            location: createdPhoto.location_c
           }
         }
       }
@@ -185,7 +187,7 @@ const photoService = {
       // Only include Updateable fields and Id
       const params = {
         records: [{
-          Id: parseInt(id),
+Id: parseInt(id),
           ...(updateData.name !== undefined && { Name: updateData.name }),
           ...(updateData.tags !== undefined && { Tags: updateData.tags }),
           ...(updateData.owner !== undefined && { Owner: updateData.owner }),
@@ -196,7 +198,8 @@ const photoService = {
           ...(updateData.height !== undefined && { height: updateData.height }),
           ...(updateData.uploadedAt !== undefined && { uploaded_at: updateData.uploadedAt }),
           ...(updateData.takenAt !== undefined && { taken_at: updateData.takenAt }),
-          ...(updateData.albumIds !== undefined && { album_ids: Array.isArray(updateData.albumIds) ? updateData.albumIds.join(',') : updateData.albumIds })
+          ...(updateData.albumIds !== undefined && { album_ids: Array.isArray(updateData.albumIds) ? updateData.albumIds.join(',') : updateData.albumIds }),
+          ...(updateData.location !== undefined && { location_c: updateData.location })
         }]
       }
 
@@ -228,7 +231,7 @@ const photoService = {
           toast.success('Photo updated successfully')
           
           // Map database fields to UI expected format
-          return {
+return {
             id: updatedPhoto.Id,
             name: updatedPhoto.Name,
             tags: updatedPhoto.Tags,
@@ -240,7 +243,8 @@ const photoService = {
             height: updatedPhoto.height,
             uploadedAt: updatedPhoto.uploaded_at,
             takenAt: updatedPhoto.taken_at,
-            albumIds: updatedPhoto.album_ids?.split(',') || []
+            albumIds: updatedPhoto.album_ids?.split(',') || [],
+            location: updatedPhoto.location_c
           }
         }
       }
@@ -299,8 +303,7 @@ const photoService = {
   async getByAlbum(albumId) {
     try {
       const tableName = 'photo'
-      const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids']
-      
+const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids', 'location_c']
       const params = {
         fields: tableFields,
         where: [{
@@ -322,7 +325,7 @@ const photoService = {
       }
 
       // Map database fields to UI expected format
-      const photos = response.data?.map(photo => ({
+const photos = response.data?.map(photo => ({
         id: photo.Id,
         name: photo.Name,
         tags: photo.Tags,
@@ -334,7 +337,8 @@ const photoService = {
         height: photo.height,
         uploadedAt: photo.uploaded_at,
         takenAt: photo.taken_at,
-        albumIds: photo.album_ids?.split(',') || []
+        albumIds: photo.album_ids?.split(',') || [],
+        location: photo.location_c
       })) || []
 
       return photos
@@ -347,8 +351,7 @@ const photoService = {
   async search(term) {
     try {
       const tableName = 'photo'
-      const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids']
-      
+const tableFields = ['Name', 'Tags', 'Owner', 'CreatedOn', 'CreatedBy', 'ModifiedOn', 'ModifiedBy', 'url', 'thumbnail_url', 'size', 'width', 'height', 'uploaded_at', 'taken_at', 'album_ids', 'location_c']
       const params = {
         fields: tableFields,
         where: [{
@@ -370,7 +373,7 @@ const photoService = {
       }
 
       // Map database fields to UI expected format
-      const photos = response.data?.map(photo => ({
+const photos = response.data?.map(photo => ({
         id: photo.Id,
         name: photo.Name,
         tags: photo.Tags,
@@ -382,7 +385,8 @@ const photoService = {
         height: photo.height,
         uploadedAt: photo.uploaded_at,
         takenAt: photo.taken_at,
-        albumIds: photo.album_ids?.split(',') || []
+        albumIds: photo.album_ids?.split(',') || [],
+        location: photo.location_c
       })) || []
 
       return photos

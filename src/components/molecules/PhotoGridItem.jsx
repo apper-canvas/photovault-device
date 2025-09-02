@@ -48,8 +48,9 @@ const PhotoGridItem = ({ photo, index, selected, onToggleSelection, onDeletePhot
         <Text className="text-white text-sm font-medium truncate">
           {photo.name || 'Untitled'}
         </Text>
-        <Text className="text-gray-300 text-xs">
+<Text className="text-gray-300 text-xs">
           {photo.uploadedAt && format(new Date(photo.uploadedAt), 'MMM d, yyyy')}
+          {photo.location && ` • ${photo.location}`}
         </Text>
       </div>
     </motion.div>

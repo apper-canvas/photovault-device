@@ -50,6 +50,7 @@ const PhotoGridItem = ({ photo, index, selected, onToggleSelection, onDeletePhot
         </Text>
 <Text className="text-gray-300 text-xs">
           {photo.uploadedAt && format(new Date(photo.uploadedAt), 'MMM d, yyyy')}
+          {photo.size && ` • ${Math.round(photo.size / 1024)} KB`}
           {photo.location && ` • ${photo.location}`}
         </Text>
       </div>
